@@ -1020,7 +1020,7 @@
     "pirates" "^4.0.5"
     "source-map-support" "^0.5.16"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.14.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.14.0", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
   "integrity" "sha512-eR8Lo9hnDS7tqkO7NsV+mKvCmv5boaXFSZ70DnfhcgiEne8hv9oCEd36Klw74EtizEqLsy4YnW8UWwpBVolHZA=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.19.0.tgz"
   "version" "7.19.0"
@@ -1757,6 +1757,11 @@
   "version" "16.0.4"
   dependencies:
     "@types/yargs-parser" "*"
+
+"@ungap/url-search-params@^0.1.4":
+  "integrity" "sha512-RLwrxCTDNiNev9hpr9rDq8NyeQ8Nn0X1we4Wu7Tlf368I8r+7hBj3uObhifhuLk74egaYaSX5nUsBlWz6kjj+A=="
+  "resolved" "https://registry.npmjs.org/@ungap/url-search-params/-/url-search-params-0.1.4.tgz"
+  "version" "0.1.4"
 
 "@urql/core@>=2.3.1":
   "integrity" "sha512-raQP51ERNtg5BvlN8x8mHVRvk4K0ugWQ69n53BdkjKpXVV5kuWp7trnwriGv1fQKa8HuiGNSCfyslUucc0OVQg=="
@@ -3563,6 +3568,13 @@
   dependencies:
     "source-map" "^0.7.3"
 
+"history@^5.2.0":
+  "integrity" "sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ=="
+  "resolved" "https://registry.npmjs.org/history/-/history-5.3.0.tgz"
+  "version" "5.3.0"
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+
 "hosted-git-info@^3.0.2":
   "integrity" "sha512-aXpmwoOhRBrw6X3j0h5RloK4x1OzsxMPyxqIHyNfSe2pypkVTZFpEiRoSipPEPlMrh0HW/XsjkJ5WgnCirpNUw=="
   "resolved" "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-3.0.8.tgz"
@@ -5348,7 +5360,7 @@
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.7.tgz"
   "version" "0.0.7"
 
-"react-native@*", "react-native@0.69.5":
+"react-native@*", "react-native@>=0.44", "react-native@0.69.5":
   "integrity" "sha512-4Psrj1nDMLQjBXVH8n3UikzOHQc8+sa6NbxZQR0XKtpx8uC3HiJBgX+/FIum/RWxfi5J/Dt/+A2gLGmq2Hps8g=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.69.5.tgz"
   "version" "0.69.5"
@@ -5392,6 +5404,22 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.4.3.tgz"
   "version" "0.4.3"
 
+"react-router-native@^6.3.0":
+  "integrity" "sha512-Y+UuU6Typnz1eGWfYf2UYmh1qItbrNBK5kr3p7ZsamsLIxCKSoYo2YJyz9JOgRiv1nOFsCoSkpQJPYLAz68hlQ=="
+  "resolved" "https://registry.npmjs.org/react-router-native/-/react-router-native-6.3.0.tgz"
+  "version" "6.3.0"
+  dependencies:
+    "@ungap/url-search-params" "^0.1.4"
+    "history" "^5.2.0"
+    "react-router" "6.3.0"
+
+"react-router@6.3.0":
+  "integrity" "sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ=="
+  "resolved" "https://registry.npmjs.org/react-router/-/react-router-6.3.0.tgz"
+  "version" "6.3.0"
+  dependencies:
+    "history" "^5.2.0"
+
 "react-shallow-renderer@16.15.0":
   "integrity" "sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA=="
   "resolved" "https://registry.npmjs.org/react-shallow-renderer/-/react-shallow-renderer-16.15.0.tgz"
@@ -5400,7 +5428,7 @@
     "object-assign" "^4.1.1"
     "react-is" "^16.12.0 || ^17.0.0 || ^18.0.0"
 
-"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@18.0.0":
+"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@>=16.8", "react@18.0.0":
   "integrity" "sha512-x+VL6wbT4JRVPm7EGxXhZ8w8LTROaxPXOqhlGyVSrv0sB1jkyFGgXxJ8LVoPRLvPR6/CIZGFmfzqUa2NYeMr2A=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.0.0.tgz"
   "version" "18.0.0"

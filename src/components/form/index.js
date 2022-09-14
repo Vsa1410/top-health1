@@ -11,39 +11,51 @@ export default function Form(){
     const [imcText, setImcText] =useState("Digite os valores para consultar seu IMC")
 
     function calculate(){
-        let heightFixed = (personHeight.replace(",", "."))
-        let functionHeight = Number(heightFixed)
-        let functionWeight = Number(weight)
 
-        let result = (functionWeight/(functionHeight**2))
-        let resultText=""
-        
-        if (result < 17){
-            setImcText( "Você está muito abaixo do peso")
-        }
-        else if(result< 18.49){
-            setImcText("Você está abaixo do Peso")
-        }
-        else if(result< 24.49){
-            setImcText("Seu peso está no ideal")
-        }
-        else if (result < 29.99){
-            setImcText("você está acima do peso ideal")
-        }
-        else if (result < 34.99){
-            setImcText("Você está com obesidade nível I")
+        if ( personHeight == undefined) {
+            alert('Preencha o campo de Altura');
+            return;
+          
+        }else if( weight == undefined) {
+            alert('Preencha o campo de peso');
+            return;
 
-        }
-        else if(result < 39.99){
-            setImcText("você está com obesidade nível II considerada ‘severa’")
-        }
-        else if (result>= 40){
-            setImcText( "Você está com obesidade nível III considerada ‘mórbida’")
-                
-        }
-        setImcResult(result)
-        }
+        }else{
+
+            let heightFixed = (personHeight.replace(",", "."))
+            let functionHeight = Number(heightFixed)
+            let functionWeight = Number(weight)
     
+            let result = (functionWeight/(functionHeight**2)).toFixed(2)
+            let resultText=""
+            
+            if (result < 17){
+                setImcText( "Você está muito abaixo do peso")
+            }
+            else if(result< 18.49){
+                setImcText("Você está abaixo do Peso")
+            }
+            else if(result< 24.49){
+                setImcText("Seu peso está no ideal")
+            }
+            else if (result < 29.99){
+                setImcText("você está acima do peso ideal")
+            }
+            else if (result < 34.99){
+                setImcText("Você está com obesidade nível I")
+    
+            }
+            else if(result < 39.99){
+                setImcText("você está com obesidade nível II considerada ‘severa’")
+            }
+            else if (result>= 40){
+                setImcText( "Você está com obesidade nível III considerada ‘mórbida’")
+                    
+            }
+            setImcResult(result)
+            }
+        
+        }
 
 
     return (
@@ -55,6 +67,7 @@ export default function Form(){
                     keyboardType="numeric"
                     style={styles.inputText}
                     returnKeyType='done' 
+                    
                     onChangeText={(e) => setPersonHeight(e)}
                 />
                 
